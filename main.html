@@ -10,19 +10,31 @@
     <title>Guess My Number</title>
 </head>
 <body >
+    <audio controls autoplay hidden >
+        <source src="Monkeys Spinning Monkeys (Kevin MacLeod) - Gaming Background Music (HD).mp3" type="audio/mpeg">
+      </audio>   
+       <audio  controls hidden >
+
+        <source src="Bruit dapplaudissement.mp3" type="audio/mpeg">
+       
+      </audio>
+     
+    <button class="button" id="dark" onclick="">Dark Mode</button>
+<button class="button" id="white">White Mode</button>
+<button class="button" id="green" onclick="">green Mode</button>
+<button class="button" id="piink" onclick="">Pink Mode</button>
+
+
     <center>
+        <img id="celebration" src="celebration.gif" alt="">
+        <img id="photo" src="white mode.gif" alt="">
     <div class="div1">
-  <h1> Guess My Number</h1>
-      
-
+  <h1 id="guess"> Guess My Number</h1>
 <p></p>
-
-<input type="text" id="1">
+<input type="text" id="1" placeholder="enter your guess here">
 </div>
-</center>
-<center>
-    <p></p>
     <div>
+        <button id="restart" class="button" onclick="location.reload()">restart</button>
     <button class="button" onclick="guessMyNumber()">check</button>
 </div>
 <div>
@@ -32,7 +44,36 @@
 </center>
 
     <script> 
+
+ $("audio")[1].pause ()
+
+
 $(".image").hide()
+$("#celebration").hide()
+$('#white').click(function (){
+  $('body').css('background-color','lightgoldenrodyellow');
+  $('#guess').css('color','black')
+  $('.div1').css('border','3px solid black')
+ 
+})
+$('#dark').click(function (){
+  $('body').css('background-color','black');
+  $('#guess').css('color','white')
+  $('.div1').css('border','3px solid white')
+ 
+})
+$('#green').click(function (){
+  $('body').css('background-color','aquamarine');
+  $('#guess').css('color','darkgreen')
+  $('.div1').css('border','3px solid green')
+ 
+})
+$('#piink').click(function (){
+  $('body').css('background-color','#e052a0');
+  $('#guess').css('color','darkred')
+  $('.div1').css('border','3px solid darkred')
+ 
+})
     </script>
 </body>
 </html>
